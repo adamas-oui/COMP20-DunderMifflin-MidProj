@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>People of Dunder Mifflin</title>
+	<link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<style type="text/css">
+	@media screen and (max-width: 1000px) {
+   h1{
+		font-size: 50px;
+	  }
+	 h2{
+		margin-top:0%;
+		font-size:20px;
+	  }
+
+	  .menubar {
+		 border-width: 6px;
+	  }
+	  .bottom {
+		 font-size: 15px;
+	  }
+}
+	.panel-table{
+		font-family: Futura;
+		box-sizing: border-box;
+		border-radius: 15px;
+		padding: 10px 20px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		text-transform: capitalize;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 900px;
+		min-height: 100vh;
+	}
+	
+	#slides-wrapper{height:320px;}
+		
+	#slide > img {
+		width:100%;
+	}
+
+	
+.panel-header{
+	letter-spacing: 1px;
+}
+
+.panel-points{
+	margin: 30px 0 25px;
+	color: #15344c;
+	letter-spacing: 1px;
+	font-size: 15px;
+	line-height: 2;
+}
+
+.panel-header-items{
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.panel-img{
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+.panel-btn{
+	border: 1px solid #c8d5e5;
+	border-radius: 10px;
+	display: inline-block;
+	text-decoration: none;
+	padding: 15px 20px;
+	margin-left: 20px;
+	transition: all 200ms ease-in-out;
+	background-color: #15344c;
+	color: white;
+}
+
+.panel-btn:hover, .panel-btn:focus{ background-color: #c8d5e5;}
+
+@media only screen and (min-width: 900px){
+	.panel-table {
+		justify-content: center;
+		flex-direction: row;
+		margin: auto;
+	} 
+}
+		
+		#slides-wrapper{height:320px;}
+		
+		h1 { 
+		text-align: center;
+		}
+		  
+			
+		img {
+			 display: block;
+			 margin-left: auto;
+			 margin-right: auto;
+			}
+		
+		.panel-btn{
+			border: 1px solid #c8d5e5;
+			border-radius: 10px;
+			display: inline-block;
+			text-decoration: none;
+			padding: 30px 40px;
+			margin-left: 20px;
+			transition: all 200ms ease-in-out;
+			background-color: #15344c;
+			color: white;
+			font-size : 20px
+		}
+		
+		.panel-btn:hover, .panel-btn:focus{ background-color: #c8d5e5;}
+
+
+	</style>
+	
+	<div class="top"><a href="index.html" style = "text-decoration:none; color:#fff"> <h1>Dunder Mifflin Inc,<h1></a><h2>Paper Company</h2></div>
+		
+		<div id="content">
+		
+			<div class="menubar">
+
+				<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="dundermifflinshop.html">Shop</a></li>
+				<li><a href="history_yilin.html">History</a></li>
+				<li><a href="dundercontact.html">Contact Us</a></li>
+				<li><a href="whydunder.html">Why Dunder Mifflin?</a></li>
+				<li><a href="dunderpeople2.html">Meet the People</a></li>
+				<li><a href="careers_yilin.html">Careers</a></li>
+				</ul>
+				
+			</div>	
+		</div>	
+		
+	<script language="javascript">
+	people = ["scott.jpg", "jim4.jpg", "Angela.jpg", "kevin.jpg", "creed.jpg",
+	 "meredith.jpg", "oscar.jpg", "toby.jpg"];
+	var Index=0;
+	
+	//smaller kevin bigger jim
+	
+	$(document).ready(function() {
+		//alert("hi")
+		$("#startSlides").click(slideShow);
+		$("#stopSlides").click(function()
+			{
+				$("#slide img").stop().fadeIn();
+			}
+		);
+	})
+	function slideShow()
+	{
+		$("#slide img").fadeOut(1500,nextSlide);
+	}
+	function nextSlide()
+	{
+		Index++;
+		Index= Index== people.length?0: Index;
+		$("#slide img").attr("src", "peopleimages/"+people[Index]);
+		$("#slide img").fadeIn(1500,slideShow);
+	}
+	</script>
+</head>
+
+
+<body>
+	
+	
+	<div class="panel-table">
+
+		<div class="panel">
+
+
+		<div id='slides-wrapper'>
+			<div id='slide'>
+				<img src="peopleimages/scott.jpg" />
+			</div>
+		</div>
+		<br>
+		<br>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	<input type= "button" id="startSlides" class="panel-btn" value="Start">
+	<input type= "button" id="stopSlides" class="panel-btn" value="Stop">
+
+	
+</div>
+
+</div>
+
+<div class = "bottom">
+		Scranton PA | New York NY | Akron Ohio | Albany NY | Nashua NY | Rochester NY | Utica NY | Syracuse NY |
+		<br /><br />Binghamton NY | Buffalo NY | Camden NJ | Pittsfield MA | Stamford CT | Yonkers NY | 
+
+	   	<br /> 
+		<br /> 
+	Dunder Mifflin Inc,
+		<br />
+	Since 1949
+	</div>	
+</body>
+</html>
